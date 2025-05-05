@@ -3,10 +3,26 @@
 
 #include <iostream>
 #include <string>
+#include "BasicShape.h"
+#include "Circle.h"
+#include "Rectangle.h"
+#include "Square.h"
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    BasicShape** shapes = new BasicShape*[5];
+
+    shapes[0] = new Rectangle{5,6,"Rect1"};
+    shapes[1] = new Rectangle{15,12,"Rect2"};
+    shapes[2] = new Circle{72, 3, 9, "Circle1"};
+    shapes[3] = new Circle{14,13,4,"Circle2"};
+    shapes[4] = new Square{5, "Square1"};
+
+    for (int i = 0; i < 5; i++)
+    {
+        shapes[i]->calcArea();
+        cout << "Name: " << shapes[i]->getName() << " Area: " << shapes[i]->getArea() << endl;
+    }
 }
 

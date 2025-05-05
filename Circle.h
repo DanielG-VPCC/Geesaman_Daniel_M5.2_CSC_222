@@ -12,7 +12,14 @@ private:
 	double radius;
 public:
 	Circle(double x, double y, double r, string n = "Circle");
-	double calcArea() override;
+	double calcArea() override
+	{
+		/*cout << "I am here";*/
+		double a;
+		a = 3.14 * pow(radius, 2);
+		setArea(a);
+		return a;
+	};
 
 	double getXC();
 	double getYC();

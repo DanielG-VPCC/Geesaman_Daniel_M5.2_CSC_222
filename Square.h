@@ -11,7 +11,8 @@ private:
 public:
 	Square(double s, string n = "Square") : Rectangle(s, s, n)
 	{
-		
+		side = s;
+		setName(n);
 	};
 	
 

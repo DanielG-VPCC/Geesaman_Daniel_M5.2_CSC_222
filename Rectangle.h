@@ -11,7 +11,13 @@ private:
 	double width;
 public:
 	Rectangle(double l, double w, string n = "Rectangle");
-	double calcArea() override;
+	double calcArea() override 
+	{
+		double a;
+		a = (length * width);
+		setArea(a);
+		return a;
+	};
 
 	double getLength();
 	double getWidth();
